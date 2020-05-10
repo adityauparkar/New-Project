@@ -1,0 +1,2 @@
+export const USER_LOGGEDIN = 'USER_LOGGEDIN'
+export const LOGOUT_USER = 'LOGOUT_USER'

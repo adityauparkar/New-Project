@@ -1,0 +1,361 @@
+{
+    "identify": {
+      "asset_management": {
+        "title": "Asset Management",
+        "questions": [{
+            "text": "The ability to identify all organisational assets and maintain visibility along with monitoring them and maintaining a proper documentation.",
+            "description": "The ability to identify all organisational assets and maintain visibility along with monitoring them and maintaining a proper documentation."
+          },{
+            "text": "A full record of organizations software and applications must be maintained. ",
+            "description": "Conduct security assessment for all new software and review major updates before installing on production system. Maintain a detailed history of all installed software and perform security assessment and update them frequently."
+          },{
+            "text": "Resources are prioritized based on their classification, criticality and business value.",
+            "description": "All the organizations resources must be identified and prioritized based on their business values and criticality."
+          },{
+            "text": "Maintain an inventory of all sensitive information stored, processed, or transmitted by the organization's technology systems, including those located on-site or at a remote service provider.",
+            "description": "Inventory of all data storages, their locations and the type of data kept in each location."
+          }]
+      },
+      "business_environment": {
+        "title": "Business Environment",
+        "questions": [{
+            "text": "Services of the organization are identified, prioritized and communicated along with assessment of the service dependency provided by the organization.",
+            "description": "Services that are critical for the organization�s operations and services have been identified and documented based on their priority and dependency factor."
+          },{
+            "text": "Intrinsic dependencies pertaining to the organisation's mission, values, brand image, ethical and moral values are documented and understood.",
+            "description": "The identification of dependencies that are intrinsic to the organization�s reputation and values to be documented and understood."
+          }]
+      },
+      "Governance": {
+        "title": "Governance",
+        "questions": [{
+            "text": "A periodic review of security policies and procedures is undertaken, with clear roles, responsibilities and privileges outlined for each member of the organization",
+            "description": "Conduct annual review of the policies in place and assign roles, responsibilities and privileges to staff accordingly."
+          },{
+            "text": "A clear reporting line for security responsibilities is developed and assigning of access level hierarchy for members with cyber security roles.",
+            "description": "Establish and list details of staff with clearance level and security responsibilities in the organization."
+          },{
+            "text": "Assessment of financial, legal and regulatory impacts to the organization are documented, in the case of a cyber event.",
+            "description": "Conduct an annual assessment outlining the impact of cyber events on the organisation"
+          },{
+            "text": "Insurance policy is reviewed and updated on its inclusions and exclusions, based on the current market scenario.",
+            "description": "Conduct an annual assessment of all insurance policies."
+          }]
+      },
+      "Risk_assesment": {
+        "title": "Risk assesment",
+        "questions": [{
+            "text": "Internal and external threats are identified and documented.",
+            "description": "Conduct an annual review of internal and external threats."
+          },{
+            "text": "Vulnerabilities for all assets are identified and documented.",
+            "description": "Vulnerabilities are assessed and documented prior to introducing new assets to the system. Conduct an annual review of all assets."
+          },{
+            "text": "Potential cyber security risks and vulnerabilities of the organisation identified, with potential impacts and likelihoods defined.",
+            "description": "An annual cyber security risk assessment is undertaken."
+          },{
+            "text": "Acceptable risk tolerance levels are communicated to related stakeholders.",
+            "description": "Report acceptable risk to stakeholders every three years."
+          }]
+      },
+      "Risk_management": {
+        "title": "Risk Management",
+        "questions": [{
+            "text": "A risk rating process is documented.",
+            "description": "Conduct an annual review of risk rating."
+          },{
+            "text": "Status of risk tolerance policy for critical infrastructure is identified.",
+            "description": "Annual review of critical infrastructure risk."
+          }]
+      },
+      "Supply_chain_management": {
+        "title": "Supply Chain Management",
+        "questions": [{
+            "text": "Supply chain risk management processes have been developed and documented.",
+            "description": "Conduct an annual review of supply chain risk.."
+          },{
+            "text": "Documentation of all vendor software and hardware exists, with vendors contact details maintained.",
+            "description": "Conduct an annual review of vendor contact details."
+          },{
+            "text": "Suppliers, vendors and their services are assessed against the organisation's risk assessment process.",
+            "description": "Conduct annual assesment for the services provided by the vendors."
+          }]
+      }
+  
+    }, 
+    "protect": {
+      "identity_management": {
+        "title": "Identity Management and Access Control",
+        "questions": [{
+            "text": "The organization has a proper authentication mechanism for its users and devices, with accounts revoked and managed according to the organization's policy. Access permission is set according to the principles of least privilege.",
+            "description": "A quarterly audit of all user accounts is conducted."
+          },{
+            "text": "Remote access to data and assets of the company are managed.",
+            "description": "Quarterly audit of all access permissions."
+          },{
+            "text": "Password policies are in place to enforce strong passwords and account lockout is enabled for multiple failed attempts.",
+            "description": "Passwords are greater than 8 characters and are composed of a combination of numbers, symbols, capital and lower-case letters. Account lockout occurs after 5 unsuccessful attempts."
+          },{
+            "text": "Elevated access or administration access permissions are limited only to selected authorized users.",
+            "description": "Quarterly audits of all elevated access permissions."
+          }]
+      },
+      "awareness": {
+        "title": "Awareness and Training",
+        "questions": [{
+            "text": "Regular training is provided to users on spam emails and identity theft, including senior executives.",
+            "description": "Biannual spam training campaigns are conducted and/or annual formal cyber security training."
+          },{
+            "text": "Organization has cybersecurity culture advocates to define the rules abide by law to be followed by the employees.",
+            "description": "Technical leaders should appoint these advocates in every department at their organization. So that they can act as extension of CISOs(Chief Information Security Officer) and keep employees trained and motivated."
+          },{
+            "text": "System/network administrators are trained in cyber security. Administrators, users and third-party stakeholders are aware of their roles and responsibilities.",
+            "description": "Annual cyber security training for system administrive staff is performed, with proof of completion provided."
+          }]
+      },
+      "data_security": {
+        "title": "Data Security",
+        "questions": [{
+            "text": "All data links beyond local network boundaries are encrypted.",
+            "description": "A Virtual Private Network (VPN) is incorporated to protect data links."
+          },{
+            "text": "All operating systems, applications and firmware are patched regularly. All IT software and hardware are supported, with legacy devices isolated or removed from the network.",
+            "description": "Annual review of network connected devices, ensuring regular vulnerability scans."
+          },{
+            "text": "Host-based firewalls are enabled and configured to block incoming connections.",
+            "description": "Host-based firewalls are enabled on both servers and workstations."
+          },{
+            "text": "A web filter is in place, blocking blacklisted websites and content.",
+            "description": ""
+          },{
+            "text": "A Disaster Recovery (DR) site has been created and regularly maintained.",
+            "description": "The DR site is in a different geographical location as the primary centre."
+          },{
+            "text": "Data protection systems have been implemented and monitored regularly according to schedule. ",
+            "description": "The organization protecting their data from breaches and proper protection systems has been installed and actively maintained."
+          },{
+            "text": "Hierarchical administrative controls are implemented and followed.",
+            "description": "In an organization we should have limited administrative controls based on their hierarchy."
+          }]
+      },
+      "information_protection": {
+        "title": "Information Protection Processes and Procedures",
+        "questions": [{
+            "text": "Baseline configurations for information systems are developed and maintained.",
+            "description": "Baseline distribution images or procedures to uninstall all unwanted software."
+          },{
+            "text": "Regular backups are performed, with backup data rechecked and verified.",
+            "description": "Weekly and daily backups are performed."
+          },{
+            "text": "The organisation has an in depth understanding of their data flows and storage, with data managed according to organisational policies and regulatory requirements.",
+            "description": ""
+          },{
+            "text": "A cyber security Incident Response Plan (IRP) has been created, communicated and tested. This plan meets the organisation's Business Continuity Plan (BCP) requirements.",
+            "description": "The IRP is reviewed annually."
+          },{
+            "text": "Unnecessary data has been handled carefully and left with no trace by using shredders.",
+            "description": "Organization conduct audit to handle unnecessary data by utilization of shredders to erase the memory of data location"
+          },{
+            "text": "A vulnerability management plan has been developed, communicated and implemented.",
+            "description": "Ensure the organisation performs an annual review of its vulnerability management plan. "
+          }]
+      },
+      "maintenance": {
+        "title": "Maintenance",
+        "questions": [{
+            "text": "A change control process is in place, with changes tested in a sandbox before going live.",
+            "description": "The change control process is reviewed annually."
+          },{
+            "text": "Vendor access to organisational data and systems is monitored and restricted.",
+            "description": "Annual review of vendor access to organisational data."
+          }]
+      },
+      "protective_technology": {
+        "title": "Protective Technology",
+        "questions": [{
+            "text": "Logs are monitored, reviewed and recorded.",
+            "description": null
+          },{
+            "text": "Data transferred to and from removable media is monitored and controlled.",
+            "description": "Removable media monitoring systems are installed."
+          },{
+            "text": "Antivirus software is installed and up to date.",
+            "description": null
+          },{
+            "text": "Nextgen antivirus software is installed and operational.",
+            "description": null
+          },{
+            "text": "Firewall devices are installed and maintained to protect the network boundary. All unused incoming ports are closed, with default passwords of boundary firewalls are changed.",
+            "description": null
+          }]
+      }
+    },
+     "detect": {
+      "anomalies_and_events": {
+        "title": "Anomalies and Events",
+        "questions": [{
+            "text": "Network servers and other connected devices are monitored. Events are collected to establish a baseline.",
+            "description": "A base network is initiated to manage and handle all the network servers and their connected device activities."
+          },{
+            "text": "Detected events are analysed and impact is determined with evidence of data and sources.",
+            "description": "Suspected events are examined and the consequence is predicted according to the resources and records available."
+          },{
+            "text": "Alerts are created when unauthorized events occur.",
+            "description": "In the case of event occurring without notice, alerts are generated and initiated."
+          }]
+      },
+      "security_control_monitoring": {
+        "title": "Security Control Monitoring",
+        "questions": [{
+            "text": "All devices in the network are monitored for malware. Malware protection software is updated, with on access scanners enabled. ",
+            "description": "Malware protection software is regularly updated and monitored through the scanners available on access in order to prevent infections in our devices."
+          },{
+            "text": "Physical access to all devices is restricted and monitored.",
+            "description": "Accessing the devices physically is prohibited and the activities are recorded."
+          },{
+            "text": "Inbound and outbound traffic is continuously monitored for suspicious activity.",
+            "description": "For the safe side, incoming and outgoing signals are recorded and monitored continuously in search of any possible dubious activity."
+          },{
+            "text": "Inbound and outbound emails are scanned for suspicious content.",
+            "description": "The content of emails too, irrespectively of sending or receiving are inspected for any such doubtful activity."
+          },{
+            "text": "All web traffic is scanned for suspicious activity.",
+            "description": "All traffic on the site is checked for criminal activity."
+          },{
+            "text": "A mobile device management system is installed, with activity monitored to block unauthorised mobile device access to the system.",
+            "description": "A management system is installed in the mobile device to block any unwanted authorization to the organization server."
+          },{
+            "text": "Regular scans for vulnerabilities are performed and reported.",
+            "description": "The system activities are regularly monitored and scanned in order to prevent any kind of vulnerability."
+          },{
+            "text": "Intrusion Detection Systems (IDS) are installed and monitored to block unauthorised access and suspicious traffic.",
+            "description": "In order to prevent any unwanted authorization, certain system like IDS is installed and maintained."
+          }]
+      },
+      "detection_processes": {
+        "title": "Detection Processes",
+        "questions": [{
+            "text": "Detection processes are tested with the cyber security assessment updated.",
+            "description": "Detection processes are checked using modified information security assessment."
+          },{
+            "text": "Roles and Responsibilities for detection are explained properly to understand accountabilty.",
+            "description": "Each of the team member is educated about their role and responsibility for detecting an event."
+          },{
+            "text": "Logs are aggregated to a central log management system for analysis and review.",
+            "description": "The central log management system collects the past logs and inspects it."
+          },{
+            "text": "Event detection information is communicated to responsible teams.",
+            "description": "Each team is allocated a specific task and the information for any event is passed amongst them."
+  
+          },{
+            "text": "All removable media is scanned for malware before access is allowed.",
+            "description": "All the portable media is inspected for malware before granting authorization."
+          },{
+            "text": "Normal behaviour of the system is established to measure against suspicious activities and improve it timely.",
+            "description": "The system behaviour is updated regularly and recorded in order to suspect any suspicious event."
+          }]
+      }
+    }, 
+  
+      "response": {
+        "Response_planning": {
+          "title": "Response Planning",
+          "questions": [{
+              "text": "A response plan has been created and can be implemented in the event of a system breach.",
+              "description": "Response plans are reviewed annually."
+            }]
+        },
+        "Communications": {
+          "title": "Communications",
+          "questions": [{
+              "text": "There is a dedicated incident response team, who have clearly defined roles and responsibilities.",
+              "description": "Annual reviews of incident response team personnel and procedures are undertaken."
+            },{
+              "text": "The organisation's Incident Management Plan (IMP) is tested and improved as required.",
+              "description": "Conduct an annual review of the IMP."
+            },{
+              "text": "Cyber security policies include provisions for incident reporting.",
+              "description": "Incident reporting processes are reviewed annually."
+            },{
+              "text": "Maintain and manage access to cyber security services and specialists.",
+              "description": "Conduct annual reviews of contracts with cyber security security specialists."
+  
+            }]
+        },
+        "Analysis": {
+          "title": "Analysis",
+          "questions": [{
+              "text": "Notifications from detection systems are investigated.",
+              "description": "Detection systems are reviewed annually"
+            },{
+              "text": "The impact of the incident is understood and categorised in a manner consistent with response plans.",
+              "description": "Responce plan is made consistent alongside the new inclident impacts."
+            },{
+              "text": "Forensics investigation are performed",
+              "description": "Forensics investigations are done in a periodic manner without fail."
+            }]
+        },
+        "Mitigation": {
+          "title": "Mitigation",
+          "questions": [{
+              "text": "Incidents are contained, with adequate mitigation strategies enforced.",
+              "description": "Enforcing Mitigation standards to reduce or contain risks"
+            },{
+              "text": "Newly identified vulnerabilities are documented as accepted risks.",
+              "description": "Continuous evaluation to find new vulnerabilities that add to risks."
+  
+            }] 
+  
+        },
+        "Improvements": {
+          "title": "Improvements",
+          "questions": [{
+              "text": "Lessons learned meetings are held periodically after the occurrence of an incident. ",
+              "description": "Periodic review of lessons learned."
+            },{
+              "text": "Response strategies are updated from lessons learned.",
+              "description": "Timely updation of responce techniques from lessons learned"
+            }]
+  
+        }
+      }, 
+      "recovery": {
+        "recovery_planning": {
+          "title": "Recovery Planning",
+          "questions": [{
+              "text": "Disaster Recovery (DRP) and Business Continuity (BCP) plans have been created.",
+              "description": "Should have strong recovery plans and strategies to identify any of the unusual activities going through system."
+            },{
+              "text": "Roles and responsibilities of the recovery process are explicitly defined.",
+              "description": "Company should have well experienced individual to keep every track happening on the recovery phase."
+            },{
+              "text": "A physically separate Disaster Recovery (DR) site exists.",
+              "description": "Organization should always keep access to cloud backup incase their original resources gets into misuse"
+            }]
+        },
+        "improvements": {
+          "title": "Improvements",
+          "questions": [{
+              "text": "Recovery plans and strategies are incorporated into lessons learned.",
+              "description": "Stakeholders should always keep reviewing the results of the present attack and the previous attack to reduce similar attacks."
+            },{
+              "text": "All systems are regularly backed up, with test restorations performed regularly.",
+              "description": "Every system must be backed-up regularly to avoid losing whole data and its control."
+            }]
+        },
+  
+        "communications": {
+          "title": "Communications",
+          "questions": [{
+              "text": "Public relation and crisis management strategies are prepared and discussed, to minimise reputational damage.",
+              "description": "Should develop strong public relation to avoid any kind of reputational damage.Board meetings should be conducted on regular basis to discuss activity status."
+            },{
+              "text": "Emergency communication channels are maintained to communicate recovery activities. A status report is prepared and discussed.",
+              "description": "Use different platforms to communicate the impacts of cyber-attack."
+            }]
+        }
+  
+      }
+    }
+  
+  
