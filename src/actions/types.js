@@ -1,2 +1,4 @@
 export const USER_LOGGEDIN = 'USER_LOGGEDIN'
 export const LOGOUT_USER = 'LOGOUT_USER'
+export const UPDATE_RESULT = 'UPDATE_RESULT'
+export const CLEAR_RESULT = 'CLEAR_RESULT'

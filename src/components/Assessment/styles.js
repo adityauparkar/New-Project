@@ -113,6 +113,13 @@ const AssessmentStyles = styled.div`
                   color: #495057;
                   border: 1px solid #ced4da;
                 }
+                .select-error{
+                  border: 1px solid #fd1616 !important;
+                }
+                .error{
+                  color: #fd1616;
+                  font-size: 14px;
+                }
                 .difficulty-level-container {
                   font-size: 1rem;
                   font-weight: 400;

@@ -25,9 +25,4 @@ const UserSchema = new mongoose.Schema({
 
 const User = mongoose.model('User', UserSchema);
 
-module.exports.addUser = function (newUser, callback) {
-    console.log("saved");
-    User.create(newuser, callback);
-}
-
 module.exports = User;

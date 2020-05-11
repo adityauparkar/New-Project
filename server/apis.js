@@ -73,26 +73,13 @@ router.post('/api/signup', (req, res) => {
           bcrypt.hash(newUser.password, salt, (err, hash) => {
             if (err) throw err;
             newUser.password = hash;
-            /*newUser
+            newUser
               .save()
               .then(user => {
                 //res.redirect("/login")
                 res.send({msg: "User successfully created"})
                 })
-              .catch(err => console.log(err));*/
-              User.addUser(newUser, function (err, adduser) {
-                  if (newUser) {
-                      response = {
-                          "result": "Data Inserted Successfully"
-                      }
-                      console.log(response);
-                  } else {
-                      errot = {
-                          "error":"Sorry Insertion failed"
-                      }
-                      console.log(error);
-                  }
-              });
+              .catch(err => console.log(err));
           });
         });
       }
@@ -659,7 +646,7 @@ router.post('/api/identify', function(req, res) {
 	}
 	console.log(i);
 	identifyscore={
-	  _id: req.user.email,
+	  _id: req.body.email,
 	  IDAM1: i[0],
 	  IDAM1D: id1,
 	  IDAM2: i[1],
@@ -1072,7 +1059,7 @@ router.post('/api/protect', function(req, res) {
   }
   console.log(p);
   protectscore={
-    _id: req.user.email,
+    _id: req.body.email,
     PRAC1: p[0],
     PRAC1D: pd1,
     PRAC2: p[1],
@@ -1375,7 +1362,7 @@ router.post('/api/detect', function(req, res) {
   }
   console.log(d);
   detectscore={
-    _id: req.user.email,
+    _id: req.body.email,
     DEAE1: d[0],
     DEAE1D: dd1,
     DEAE2: d[1],
@@ -1444,7 +1431,7 @@ router.get('/respond', ensureAuthenticated, (req, res) =>
 );
 
 //Calculation of RESPOND PHASE
-router.post('/api/respond', function(req, res) {
+router.post('/api/response', function(req, res) {
 	console.log("RESPOND PHASE");
 	var r1=parseInt(req.body.r1);
 	console.log(r1);
@@ -1655,7 +1642,7 @@ router.post('/api/respond', function(req, res) {
   }
   console.log(r);
   respondscore={
-    _id: req.user.email,
+    _id: req.body.email,
     RSRP1: r[0],
     RSRP1D: rd1,
     RSCO1: r[1],
@@ -1711,14 +1698,14 @@ router.post('/api/respond', function(req, res) {
 });
 
 // Recover
-router.get('/recover', ensureAuthenticated, (req, res) =>
+router.get('/recovery', ensureAuthenticated, (req, res) =>
   res.render('Recover-Phase', {
     user: req.user
   })
 );
 
 //Calculation of RECOVER PHASE
-router.post('/api/recover', function(req, res) {
+router.post('/api/recovery', function(req, res) {
 	console.log("RECOVER PHASE");
 	var re1=parseInt(req.body.re1);
 	console.log(re1);
@@ -1856,7 +1843,7 @@ router.post('/api/recover', function(req, res) {
   }
   console.log(re);
   recoverscore={
-    _id: req.user.email,
+    _id: req.body.email,
     RCRP1: re[0],
     RCRP1D: red1,
     RCRP2: re[1],

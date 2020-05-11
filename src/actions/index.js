@@ -1,6 +1,8 @@
 import {
     USER_LOGGEDIN,
-    LOGOUT_USER
+    LOGOUT_USER,
+    UPDATE_RESULT,
+    CLEAR_RESULT
 } from "./types";
 
 
@@ -15,3 +17,17 @@ export function logout() {
         type: LOGOUT_USER
     };
 }
+
+export function updateResult(data) {
+    return {
+        type: UPDATE_RESULT,
+        payload: data
+    };
+}
+
+export function clearResult() {
+    return {
+        type: CLEAR_RESULT
+    };
+}
+

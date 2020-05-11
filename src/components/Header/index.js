@@ -3,6 +3,7 @@ import Styles from './styles'
 import axios from 'axios'
 import {Redirect} from 'react-router-dom'
 import {connect} from 'react-redux'
+import * as actions from '../../actions'
 
 class Header extends React.Component {
   constructor(props) {
@@ -18,6 +19,7 @@ class Header extends React.Component {
   handleLogout = () => {
     axios.get("/api/logout")
     .then((res)=>{
+      this.props.logout();
       this.setState({redirect: true})
     })
     .catch((err)=>{
@@ -154,4 +156,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, null)(Header)
+export default connect(mapStateToProps, actions)(Header)
