@@ -7,7 +7,7 @@ const passport = require('passport');
 const User = require('./models/User');
 
 
-console.log("Insdie apis")
+console.log("Inside apis")
 
 router.post("/api/trial", (req, res)=>{
     console.log("---------------------Success--------------------");
@@ -700,7 +700,60 @@ router.post('/api/identify', function(req, res) {
 	  ior:ior,
 	  ioml:ioml,
 	  iorm:iorm
-	}
+  }
+  let recom_values = [
+    {IDAM1: wis1},
+	  {IDAM2: wis2},
+	  {IDAM3: wis3},
+	  {IDAM4: wis4},
+	  {IDBE1: wis5},
+	  {IDBE2: wis6},
+	  {IDGV1: wis7},
+	  {IDGV2: wis8},
+	  {IDGV3: wis9},
+	  {IDGV4: wis10},
+	  {IDRA1: wis11},
+	  {IDRA2: wis12},
+	  {IDRA3: wis13},
+	  {IDRA4: wis14},
+	  {IDRM1: wis15},
+	  {IDRM2: wis16},
+	  {IDSC1: wis17},
+	  {IDSC2: wis18},
+	  {IDSC3: wis19},
+  ]
+  res.send({
+    recom_values,
+    percent: iorm,
+    overall: {
+      score: ior,
+      maturity_level: ioml
+    },
+    subcategories: [{
+      score: isc1sr,
+      maturity_level: isc1risk
+    },
+    {
+      score: isc2sr,
+      maturity_level: isc2risk
+    },
+    {
+      score: isc3sr,
+      maturity_level: isc3risk
+    },
+    {
+      score: isc4sr,
+      maturity_level: isc4risk
+    },
+    {
+      score: isc5sr,
+      maturity_level: isc5risk
+    },
+    {
+      score: isc6sr,
+      maturity_level: isc6risk
+    }]
+  })
 	IdentifyScore.addIdentifyScore(identifyscore, function(err, identifyscore) {
 		  if (identifyscore) {
 			 response = {
@@ -1130,6 +1183,67 @@ router.post('/api/protect', function(req, res) {
     poml: poml,
     porm: porm
   }
+  let recom_values = [
+    {PRAC1: wps1},
+	  {PRAC2: wps2},
+	  {PRAC3: wps3},
+	  {PRAC4: wps4},
+	  {PRAT1: wps5},
+	  {PRAT2: wps6},
+	  {PRAT3: wps7},
+	  {PRDS1: wps8},
+	  {PRDS2: wps9},
+	  {PRDS3: wps10},
+	  {PRDS4: wps11},
+	  {PRDS5: wps12},
+	  {PRDS6: wps13},
+	  {PRDS7: wps14},
+	  {PRIP1: wps15},
+	  {PRIP2: wps16},
+	  {PRIP3: wps17},
+	  {PRIP4: wps18},
+    {PRIP5: wps19},
+    {PRIP6: wps20},
+    {PRMA1: wps21},
+    {PRMA2: wps22},
+    {PRPT1: wps23},
+    {PRPT2: wps24},
+    {PRPT3: wps25},
+    {PRPT4: wps26},
+    {PRPT5: wps27},
+  ]
+  res.send({
+    recom_values,
+    percent: porm,
+    overall: {
+      score: por,
+      maturity_level: poml
+    },
+    subcategories: [{
+      score: psc1sr,
+      maturity_level: psc1risk
+    },
+    {
+      score: psc2sr,
+      maturity_level: psc2risk
+    },
+    {
+      score: psc3sr,
+      maturity_level: psc3risk
+    },
+    {
+      score: psc4sr,
+      maturity_level: psc4risk
+    },
+    {
+      score: psc5sr,
+      maturity_level: psc5risk
+    },
+    {
+      score: psc6sr,
+      maturity_level: psc6risk
+    }]
+  })
   console.log(protectscore);
   ProtectScore.addProtectScore(protectscore, function(err, protectscore) {
         if (protectscore) {
@@ -1407,6 +1521,45 @@ router.post('/api/detect', function(req, res) {
     doml: doml,
     dorm: dorm
   }
+  let recom_values = [
+    {DEAE1: wds1},
+	  {DEAE2: wds2},
+	  {DEAE3: wds3},
+	  {DECM1: wds4},
+	  {DECM2: wds5},
+	  {DECM3: wds6},
+	  {DECM4: wds7},
+	  {DECM5: wds8},
+	  {DECM6: wds9},
+	  {DECM7: wds10},
+	  {DECM8: wds11},
+	  {DEDP1: wds12},
+	  {DEDP2: wds13},
+	  {DEDP3: wds14},
+	  {DEDP4: wds15},
+	  {DEDP5: wds16},
+	  {DEDP6: wds17},
+  ]
+  res.send({
+    recom_values,
+    percent: dorm,
+    overall: {
+      score: dor,
+      maturity_level: doml
+    },
+    subcategories: [{
+      score: dsc1sr,
+      maturity_level: dsc1risk
+    },
+    {
+      score: dsc2sr,
+      maturity_level: dsc2risk
+    },
+    {
+      score: dsc3sr,
+      maturity_level: dsc3risk
+    }]
+  })
   console.log(detectscore);
   DetectScore.addDetectScore(detectscore, function(err, detectscore) {
         if (detectscore) {
@@ -1681,6 +1834,48 @@ router.post('/api/response', function(req, res) {
     roml: roml,
     rorm: rorm
   }
+  let recom_values = [
+    {RSRP1: wrs1},
+	  {RSCO1: wrs2},
+	  {RSCO2: wrs3},
+	  {RSCO3: wrs4},
+	  {RSCO4: wrs5},
+	  {RSAN1: wrs6},
+	  {RSAN2: wrs7},
+	  {RSAN3: wrs8},
+	  {RSMI1: wrs9},
+	  {RSMI2: wrs10},
+	  {RSIM1: wrs11},
+	  {RSIM2: wrs12},
+  ]
+  res.send({
+    recom_values,
+    percent: rorm,
+    overall: {
+      score: ror,
+      maturity_level: roml
+    },
+    subcategories: [{
+      score: rsc1sr,
+      maturity_level: rsc1risk
+    },
+    {
+      score: rsc2sr,
+      maturity_level: rsc2risk
+    },
+    {
+      score: rsc3sr,
+      maturity_level: rsc3risk
+    },
+    {
+      score: rsc4sr,
+      maturity_level: rsc4risk
+    },
+    {
+      score: rsc5sr,
+      maturity_level: rsc5risk
+    }]
+  })
   console.log(respondscore);
   RespondScore.addRespondScore(respondscore, function(err, respondscore) {
         if (respondscore) {
@@ -1868,6 +2063,35 @@ router.post('/api/recovery', function(req, res) {
     reoml: reoml,
     reorm: reorm
   }
+  let recom_values = [
+    {RCRP1: wres1},
+	  {RCRP2: wres2},
+	  {RCRP3: wres3},
+	  {RCIM1: wres4},
+	  {RCIM2: wres5},
+	  {RCCO1: wres6},
+	  {RCCO2: wres7},
+  ]
+  res.send({
+    recom_values,
+    percent: reorm,
+    overall: {
+      score: reor,
+      maturity_level: reoml
+    },
+    subcategories: [{
+      score: resc1sr,
+      maturity_level: resc1risk
+    },
+    {
+      score: resc2sr,
+      maturity_level: resc2risk
+    },
+    {
+      score: resc3sr,
+      maturity_level: resc3risk
+    }]
+  })
   RecoverScore.addRecoverScore(recoverscore, function(err, recoverscore) {
         if (recoverscore) {
            response = {
@@ -2250,43 +2474,50 @@ router.get('/show', function(req,res){
 });
 
 // Recommendations
-router.get('/recommendations', ensureAuthenticated, (req, res) =>
-  res.render('Recommendations', {
-    user: req.user
-  })
-);
+// router.get('/recommendations', ensureAuthenticated, (req, res) =>
+//   res.render('Recommendations', {
+//     user: req.user
+//   })
+// );
 
 //showing recommendations
-router.post('/recommendations', function(req,res){
+router.post('/api/recommendations', function(req,res){
+  console.log("______RECOMMENDATIONS______")
+  console.log(this.recom1)
+  console.log(this.recom2)
+  console.log(this.recom3)
+  console.log(this.recom4)
+  console.log(this.recom5)
 	var recommendation1=this.r1.r1==1;
 	var recommendation2=this.r2.r2==1;
 	var recommendation3=this.r3.r3==1;
 	var recommendation4=this.r4.r4==1;
 	var recommendation5=this.r5.r5==1;
 	recommendations={
-    rec1 : recommendation1 ? this.recom1.recomon1 : 'no recommendation',
-    rec2 : recommendation1 ? this.recom2.recomon2 : 'no recommendation',
-    rec3 : recommendation1 ? this.recom3.recomon3 : 'no recommendation',
-    rec4 : recommendation2 ? this.recom4.recomon4 : 'no recommendation',
-    rec5 : recommendation2 ? this.recom5.recomon5 : 'no recommendation',
-    rec6 : recommendation2 ? this.recom6.recomon6 : 'no recommendation',
-    rec7 : recommendation3 ? this.recom7.recomon7 : 'no recommendation',
-    rec8 : recommendation3 ? this.recom8.recomon8 : 'no recommendation',
-    rec9 : recommendation3 ? this.recom9.recomon9 : 'no recommendation',
-    rec10 : recommendation4 ? this.recom10.recomon10 : 'no recommendation',
-    rec11 : recommendation4 ? this.recom11.recomon11 : 'no recommendation',
-    rec12 : recommendation4 ? this.recom12.recomon12 : 'no recommendation',
-    rec13 : recommendation5 ? this.recom13.recomon13 : 'no recommendation',
-    rec14 : recommendation5 ? this.recom14.recomon14 : 'no recommendation',
-    rec15 : recommendation5 ? this.recom15.recomon15 : 'no recommendation'
-	}
+    rec1 : this.recom1 && recommendation1 ? this.recom1.recomon1 : 'no recommendation',
+    rec2 : this.recom2 && recommendation1 ? this.recom2.recomon2 : 'no recommendation',
+    rec3 : this.recom3 && recommendation1 ? this.recom3.recomon3 : 'no recommendation',
+    rec4 : this.recom4 && recommendation2 ? this.recom4.recomon4 : 'no recommendation',
+    rec5 : this.recom5 && recommendation2 ? this.recom5.recomon5 : 'no recommendation',
+    rec6 : this.recom6 && recommendation2 ? this.recom6.recomon6 : 'no recommendation',
+    rec7 : this.recom7 && recommendation3 ? this.recom7.recomon7 : 'no recommendation',
+    rec8 : this.recom8 && recommendation3 ? this.recom8.recomon8 : 'no recommendation',
+    rec9 : this.recom9 && recommendation3 ? this.recom9.recomon9 : 'no recommendation',
+    rec10 : this.recom10 && recommendation4 ? this.recom10.recomon10 : 'no recommendation',
+    rec11 : this.recom11 && recommendation4 ? this.recom11.recomon11 : 'no recommendation',
+    rec12 : this.recom12 && recommendation4 ? this.recom12.recomon12 : 'no recommendation',
+    rec13 : this.recom13 && recommendation5 ? this.recom13.recomon13 : 'no recommendation',
+    rec14 : this.recom14 && recommendation5 ? this.recom14.recomon14 : 'no recommendation',
+    rec15 : this.recom15 && recommendation5 ? this.recom15.recomon15 : 'no recommendation'
+  }
+  console.log(recommendations)
 
   if(this.r1.r1==0 && this.r2.r2==0 && this.r3.r3==0 && this.r4.r4==0 && this.r5.r5==0){
 	recommendations={
 		rec: 'you don\'t have any recommendations'
 	}
 	}
-  res.json(recommendations);
+  res.send(recommendations);
 });
 
 module.exports = router;

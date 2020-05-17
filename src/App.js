@@ -6,6 +6,8 @@ import Dashboard from '../src/components/Dashboard'
 import Clients from '../src/components/Clients'
 import Management from '../src/components/Management'
 import AssessmentState from '../src/components/AssessmentState'
+import Result from '../src/components/Result'
+import Recommendation from '../src/components/Recommendation'
 import axios from 'axios'
 
 export default class App extends React.Component {
@@ -23,36 +25,44 @@ export default class App extends React.Component {
     this.setState({ assessmentState })
   }
   handleNextBackClick = (isNext) => {
-    let assessment_order = ["identify", "protect", "detect", "response", "recovery"]
-    let i;
-    for(i=0;i<assessment_order.length;i++){
-        if(this.state.assessmentState==assessment_order[i])
-            break;
+    let assessment_order = [
+      'identify',
+      'protect',
+      'detect',
+      'response',
+      'recovery',
+    ]
+    let i
+    for (i = 0; i < assessment_order.length; i++) {
+      if (this.state.assessmentState == assessment_order[i]) break
     }
-    this.changeAssessmentState(assessment_order[isNext?i+1:i-1])
+    this.changeAssessmentState(assessment_order[isNext ? i + 1 : i - 1])
   }
-  componentDidMount(){
-    console.log("inside componentdidmount")
-    axios.post("/api/trial").then((res)=>{
-      console.log(res.data)
-    }).catch((err)=>{
-      console.log(err)
-    })
+  componentDidMount() {
+    console.log('inside componentdidmount')
+    axios
+      .post('/api/trial')
+      .then((res) => {
+        console.log(res.data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
   }
   render() {
     let dashboard_state = null
     let assessment_state = null
     let navigation_options = null
-    
+
     switch (this.state.dashboardState) {
       case 'csri':
         dashboard_state = (
           <Dashboard changeDashboardState={this.changeDashboardState} />
         )
         navigation_options = [
-          {text: 'Maturity Assessment', state: 'assessment'},
-          {text: 'Assessment Latest Report'},
-          {text: 'Assessment History'},
+          { text: 'Maturity Assessment', state: 'assessment' },
+          { text: 'Assessment Latest Report' },
+          { text: 'Assessment History' },
         ]
         break
       case 'assessment':
@@ -67,11 +77,11 @@ export default class App extends React.Component {
           />
         )
         navigation_options = [
-          {text: 'Identify', state: 'identify'},
-          {text: 'Protect', state: 'protect'},
-          {text: 'Detect', state: 'detect'},
-          {text: 'Response', state: 'response'},
-          {text: 'Recovery', state: 'recovery'},
+          { text: 'Identify', state: 'identify' },
+          { text: 'Protect', state: 'protect' },
+          { text: 'Detect', state: 'detect' },
+          { text: 'Response', state: 'response' },
+          { text: 'Recovery', state: 'recovery' },
         ]
 
         break
@@ -80,18 +90,34 @@ export default class App extends React.Component {
           <Assessment
             assessmentState={this.state.assessmentState}
             changeAssessmentState={this.changeAssessmentState}
-            showNext={this.state.assessmentState!="recovery"}
-            showBack={this.state.assessmentState!="identify"}
-            onNext={()=>{this.handleNextBackClick(true)}}
-            onBack={()=>{this.handleNextBackClick(false)}}
+            changeDashboardState={this.changeDashboardState}
+            showNext={this.state.assessmentState != 'recovery'}
+            showBack={this.state.assessmentState != 'identify'}
+            onNext={() => {
+              this.handleNextBackClick(true)
+            }}
+            onBack={() => {
+              this.handleNextBackClick(false)
+            }}
           />
         )
         navigation_options = [
-            {text: 'Maturity Assessment', state: 'assessment'},
-            {text: 'Assessment Latest Report'},
-            {text: 'Assessment History'},
+          { text: 'Maturity Assessment', state: 'assessment' },
+          { text: 'Assessment Latest Report' },
+          { text: 'Assessment History' },
         ]
 
+        break
+
+      case 'result':
+        dashboard_state = (
+          <Result changeDashboardState={this.changeDashboardState} />
+        )
+        break
+      case 'recommendation':
+        dashboard_state = (
+          <Recommendation changeDashboardState={this.changeDashboardState} />
+        )
         break
 
       case 'clients':
